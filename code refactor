@@ -77,4 +77,4 @@ l. Pull the updated remote repository so that the local repository can also be u
 Before making changes, pull the latest changes from the main branch:
 bash
 Copy code
-git pull origin mai
+git pull origin main
