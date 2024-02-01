@@ -1,3 +1,16 @@
+Syntax Errors: There are syntax errors in the code. For example, the constructor of the Product class has an extra '1' at the end, and the displayProduct function is missing a semicolon.
+Namespace Usage: Using using namespace std; globally can lead to naming conflicts. It's better to use specific items like using std::cout; where needed.
+Inconsistent Formatting: The indentation and spacing are inconsistent, making the code harder to read and understand.
+Missing Header Guards: There are no header guards in the header includes, which might lead to issues if the code is included in multiple files.
+Inefficient Vector Usage: In the addProduct function, using push_back may cause unnecessary reallocations. Using emplace_back can be more efficient.
+Incomplete Class Definitions: The Inventory class is missing a proper class definition, and its member functions should be declared before usage.
+Misuse of Output Operator: In the display_inventory function, there's a misuse of the output operator 'くく'. It seems like a formatting error.
+Naming Conventions: The class and function names are inconsistent; for example, there's a typo in the display_roduct function.
+Unused Variable in Main: In the main function, the result of the second call to inventory.addProduct is unused, and there's a typo in the product name.
+Inconsistent Bracing Style: The placement of braces in functions is inconsistent, making the code less readable.
+
+
+
 a. Create a project folder on your PC and name it with your roll number:
 
 Open your terminal or command prompt.
