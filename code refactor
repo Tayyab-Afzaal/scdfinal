@@ -78,3 +78,63 @@ Before making changes, pull the latest changes from the main branch:
 bash
 Copy code
 git pull origin main
+Q#2:
+Code Smells:
+Long Class:
+The Product class is currently very short, but if it grows in the future, it might be worth breaking it down into smaller, more focused classes. However, as of now, the Product class seems appropriately small.
+Feature Envy:
+Feature Envy occurs when a method of one class is more interested in the internal state of another class than its own. In the current code, the displayProduct method in the Product class seems fine, but the addProduct and displayInventory methods in the Inventory class might be considered as exhibiting feature envy.
+Refactoring Code:
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+// Product class with consistent formatting and member initialization list
+class Product {
+public:
+    string name;
+    int quantity;
+    double price;
+
+    // Constructor for explicit member initialization
+    Product(string n, int q, double p) : name(n), quantity(q), price(p) {}
+
+    // Function to display product information
+    void displayProduct() const {
+        cout << "Name: " << name << ", Quantity: " << quantity << ", Price: $" << price << endl;
+    }
+};
+
+// Inventory class with proper function names and formatting
+class Inventory {
+private:
+    vector<Product> products;
+
+public:
+    // Function to add a product to the inventory
+    void addProduct(const string& name, int quantity, double price) {
+        products.push_back(Product(name, quantity, price));
+    }
+
+    // Function to display the inventory contents
+    void displayInventory() const {
+        cout << "Inventory:\n";
+        for (const auto& product : products) {
+            product.displayProduct();
+        }
+    }
+};
+
+int main() {
+    Inventory inventory;
+
+    inventory.addProduct("Item1", 18, 5.99);
+    inventory.addProduct("Item2", 28, 10.99);
+    inventory.addProduct("Item3", 5, 15.99);
+
+    inventory.displayInventory();
+
+    return 0;
+}
