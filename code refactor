@@ -1,1 +1,80 @@
+a. Create a project folder on your PC and name it with your roll number:
 
+Open your terminal or command prompt.
+Navigate to the location where you want to create the project folder.
+Execute the following commands:
+bash
+Copy code
+mkdir <your_roll_number>
+cd <your_roll_number>
+b. Initialize a Git repository for your project. Then, configure the commit author specifically for this repository:
+
+Execute the following commands:
+bash
+Copy code
+git init
+git config user.name "Your Name"
+git config user.email "your.email@example.com"
+c. Create the main class "E-learning" and perform all the required functions there:
+
+Create a file named Elearning.java (or any preferred language extension) and implement the main class with required functions.
+d. Create separate feature branches for each function identified from the above case study, ensuring that each branch is named according to the scenario to reflect the feature it implements:
+
+Execute the following commands for each feature:
+bash
+Copy code
+git checkout -b authentication-feature
+git checkout -b course-management-feature
+git checkout -b student-enrollment-feature
+git checkout -b discussion-forums-feature
+git checkout -b live-sessions-feature
+git checkout -b assessment-grading-feature
+e. Merge each feature branch into GitHub:
+
+For each branch, merge changes to the main branch (or your designated default branch) and push to GitHub:
+bash
+Copy code
+git checkout main
+git merge authentication-feature
+git push origin main
+f. Handle any conflicts that may arise during the merging process:
+
+Resolve conflicts manually or use a merge tool. Follow on-screen instructions to complete the merge.
+g. Create local and remote repositories. Set the name of the local default branch to "main":
+
+If not done already, initialize a local repository using git init.
+Create a new repository on GitHub.
+Set the default branch on GitHub to "main".
+h. Establish a connection between the remote repository and local repository by setting the remote on the local repository:
+
+Execute the following commands:
+bash
+Copy code
+git remote add origin <remote_repository_url>
+i. Push the class. Push Your Changes to GitHub. Ensure that your local changes are pushed to your GitHub repository:
+
+Execute the following commands:
+bash
+Copy code
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+j. Create a separate feature branch (on their local repository) for each function available in the scenario. Then push the feature branch to the remote repository:
+
+Execute the following commands for each feature branch:
+bash
+Copy code
+git checkout -b authentication-feature
+git push origin authentication-feature
+k. Push your changes to GitHub using the git push command:
+
+For each feature branch, execute the following commands:
+bash
+Copy code
+git push origin <feature-branch-name>
+l. Pull the updated remote repository so that the local repository can also be updated accordingly:
+
+Before making changes, pull the latest changes from the main branch:
+bash
+Copy code
+git pull origin mai
